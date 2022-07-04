@@ -1,16 +1,15 @@
 import React, {useState} from "react";
 import './style.css'
-
 function App() {
 
-  const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+  const numbers = ['001','002','003','004','005','006','007','008','009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020'];
 
-  const [gameImages, setGameImages] = useState(alphabet.sort(() => 0.5 - Math.random()).slice(0, 12))
-  let resetGameImages = () => setGameImages(alphabet.sort(() => 0.5 - Math.random()).slice(0, 12))
+  const [gameImages, setGameImages] = useState(numbers.sort(() => 0.5 - Math.random()).slice(0, 12))
+  let resetGameImages = () => setGameImages(numbers.sort(() => 0.5 - Math.random()).slice(0, 12))
 
   const [score, setScore] = useState(0)
 
-  let addScore = () => setScore(prevScore => prevScore + 1)
+  let addScore = () => setScore(prevScore => prevScore + 1) 
   let minusScore = () => setScore(0)
 
   const [memory, setMemory] = useState([])
@@ -48,7 +47,7 @@ function App() {
         item => {
           return (<div className="game-image-container">
             <img
-             src={`/Images/letter-${item}.png`}
+             src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${item}.png`}
              onClick={addMe}
              className="game-image">
              </img>

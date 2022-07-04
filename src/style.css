@@ -39,6 +39,10 @@ footer {
     height: 50vh;
 }
 
+.game-image {
+    height: 5em;
+}
+
 .game-image:hover {
     cursor: pointer;
 }
